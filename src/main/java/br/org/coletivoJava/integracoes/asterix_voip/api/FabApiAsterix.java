@@ -14,9 +14,15 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
 
 /**
  *
+ * Documentação:
+ * https://documenter.getpostman.com/view/13040224/TzCTa5yB#4eef08ec-7c89-4e26-84d4-457e0d2912ac
+ *
+ * Postman:
+ * https://www.postman.com/omnismart-io/omnismart/collection/n6ao5mz/api-omnismart
+ *
  * @author sfurbino
  */
-@InfoConfigRestClientIntegracao(enderecosDocumentacao = "ttps://documenter.getpostman.com/view/9632769/SWLiamS3",
+@InfoConfigRestClientIntegracao(enderecosDocumentacao = "https://www.postman.com/omnismart-io/omnismart/collection/n6ao5mz/api-omnismart",
         tipoAutenticacao = FabTipoAutenticacaoRest.USUARIO_SENHA_SIMPLES,
         nomeIntegracao = FabConfigAsterixVoip.NOME_APLICACAO,
         configuracao = FabConfigAsterixVoip.class
