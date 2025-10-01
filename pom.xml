@@ -39,7 +39,7 @@
             <version>1.0.0-RC-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
-       
+
 
         <dependency>
             <groupId>br.org.coletivoJava.fw</groupId>
@@ -47,7 +47,11 @@
             <version>1.0.0-RC-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
 
 
 
