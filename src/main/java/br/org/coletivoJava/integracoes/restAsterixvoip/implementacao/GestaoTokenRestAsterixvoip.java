@@ -3,6 +3,7 @@ package br.org.coletivoJava.integracoes.restAsterixvoip.implementacao;
 import br.org.coletivoJava.integracoes.restAsterixvoip.api.InfoIntegracaoRestAsterixvoipAsterix;
 import br.org.coletivoJava.integracoes.asterix_voip.api.FabApiAsterix;
 import br.org.coletivoJava.integracoes.asterix_voip.api.FabConfigAsterixVoip;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
@@ -24,5 +25,15 @@ public class GestaoTokenRestAsterixvoip extends GestaoTokenChaveUnica {
 	public GestaoTokenRestAsterixvoip(
 			final FabTipoAgenteClienteApi pTipoAgente, final ItfUsuario pUsuario) {
 		super(FabApiAsterix.class, pTipoAgente, pUsuario);
+	}
+
+	@Override
+	public ItfTokenDeAcessoExterno gerarNovoToken() {
+		//token obtido atraves da configuracao
+		String token = getConfig().getPropriedade(FabConfigAsterixVoip.CHAVE_DE_ACESSO);
+		setToken(new TokenDeAcessoExternoSimples(token));
+//		return new TokenDeAcessoExternoSimples(getConfig().getPropriedade(FabConfigAsterixVoip.CHAVE_DE_ACESSO));
+		return getTokenCompleto();
+//		return super.gerarNovoToken();
 	}
 }

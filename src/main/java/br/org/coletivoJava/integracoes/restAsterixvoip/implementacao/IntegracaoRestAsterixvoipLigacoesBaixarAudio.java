@@ -17,4 +17,5 @@ public class IntegracaoRestAsterixvoipLigacoesBaixarAudio
 		super(FabApiAsterix.LIGACOES_BAIXAR_AUDIO, pTipoAgente, pUsuario,
 				pParametro);
 	}
+	//#cliente id pabx 189
 }
