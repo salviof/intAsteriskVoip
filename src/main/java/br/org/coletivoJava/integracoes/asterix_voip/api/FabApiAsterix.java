@@ -40,7 +40,7 @@ public enum FabApiAsterix implements ItfFabricaIntegracaoRest {
             tipoConexao = FabTipoConexaoRest.GET,
             aceitarCertificadoDeHostNaoConfiavel = true,
             tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,
-            parametrosPost = {"dominio"},
+            parametrosGet = {"uniqueId"},
             urlDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#c472b2c5-2a42-4beb-867b-0672a70addc4")
     LIGACOES_BAIXAR_AUDIO;
 
