@@ -1,13 +1,13 @@
 package br.org.coletivoJava.integracoes.restAsterixvoip.implementacao;
 
-import br.org.coletivoJava.integracoes.restAsterixvoip.api.InfoIntegracaoRestAsterixvoipAsterix;
 import br.org.coletivoJava.integracoes.asterix_voip.api.FabApiAsterix;
 import br.org.coletivoJava.integracoes.asterix_voip.api.FabConfigAsterixVoip;
+import br.org.coletivoJava.integracoes.restAsterixvoip.api.InfoIntegracaoRestAsterixvoipAsterix;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 @InfoIntegracaoRestAsterixvoipAsterix(tipo = FabApiAsterix.LIGACOES_LISTAR)
 public class GestaoTokenRestAsterixvoip extends GestaoTokenChaveUnica {
@@ -23,7 +23,7 @@ public class GestaoTokenRestAsterixvoip extends GestaoTokenChaveUnica {
 	}
 
 	public GestaoTokenRestAsterixvoip(
-			final FabTipoAgenteClienteApi pTipoAgente, final ItfUsuario pUsuario) {
+            final FabTipoAgenteClienteApi pTipoAgente, final ComoUsuario pUsuario) {
 		super(FabApiAsterix.class, pTipoAgente, pUsuario);
 	}
 

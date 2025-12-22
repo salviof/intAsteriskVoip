@@ -28,6 +28,7 @@ public class FabApiAsterixTest extends TestesApiRest {
 
             SBCore.configurar(new ConfiguradorCoreIntegracaoAsterix(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
             gerarCodigosChamadasEndpoint(FabApiAsterix.class);
+            SBCore.getConfigModulo(FabConfigAsterixVoip.class);
 
         } catch (Throwable t) {
             SBCore.RelatarErro(FabErro.SOLICITAR_REPARO, t.getMessage(), t);
