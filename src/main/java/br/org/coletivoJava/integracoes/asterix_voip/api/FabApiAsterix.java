@@ -36,7 +36,7 @@ public enum FabApiAsterix implements ComoFabricaIntegracaoRest {
             parametrosGet = {"data_final", "data_inicial", "origem", "destino", "cliente_id"},
             urlDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#4eef08ec-7c89-4e26-84d4-457e0d2912ac")
     LIGACOES_LISTAR,
-    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/downloadChamadaAudio",
+    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/downloadChamadaAudio/{0}",
             tipoConexao = FabTipoConexaoRest.GET,
             aceitarCertificadoDeHostNaoConfiavel = true,
             tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,

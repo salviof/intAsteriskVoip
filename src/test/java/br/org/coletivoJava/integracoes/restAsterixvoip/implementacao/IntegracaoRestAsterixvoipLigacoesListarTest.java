@@ -24,9 +24,9 @@ public class IntegracaoRestAsterixvoipLigacoesListarTest {
 
         String dataInicioFormatada = dataInicio.format(formatter);
         String dataFinalFormatada = dataFinal.format(formatter);
-        int clienteId = 18;
+        int clienteId = 188;
 
-        ItfRespostaWebServiceSimples resposta = FabApiAsterix.LIGACOES_LISTAR.getAcao(dataFinalFormatada, dataInicioFormatada, clienteId).getResposta();
+        ItfRespostaWebServiceSimples resposta = FabApiAsterix.LIGACOES_LISTAR.getAcao((Object) dataFinalFormatada, (Object) dataInicioFormatada, (Object) clienteId).getResposta();
         System.out.println(resposta);
         assertEquals(200, resposta.getCodigoResposta());
     }
