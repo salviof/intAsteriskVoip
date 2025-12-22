@@ -5,7 +5,7 @@
  */
 package br.org.coletivoJava.integracoes.asterix_voip.api;
 
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
@@ -27,7 +27,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         nomeIntegracao = FabConfigAsterixVoip.NOME_APLICACAO,
         configuracao = FabConfigAsterixVoip.class
 )
-public enum FabApiAsterix implements ItfFabricaIntegracaoRest {
+public enum FabApiAsterix implements ComoFabricaIntegracaoRest {
 
     @InfoConsumoRestService(getPachServico = "/_REST/resellersAPI/createDomain",
             tipoConexao = FabTipoConexaoRest.POST,
