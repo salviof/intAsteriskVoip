@@ -28,16 +28,12 @@ public enum FabConfigAsterixVoip implements ItfFabConfigModulo {
     public String getValorPadrao() {
         switch (this) {
             case URL_SERVICO_API:
-                return "https://painel.casanovadigital.com.br:5052";
-
             case CHAVE_DE_ACESSO:
-                return "CONFIGURE_SUA_CHAVE";
-
+                break;
             default:
-                throw new AssertionError(this.name());
-
+                return "não definido";
         }
-
+        return "não definido";
     }
 
 }

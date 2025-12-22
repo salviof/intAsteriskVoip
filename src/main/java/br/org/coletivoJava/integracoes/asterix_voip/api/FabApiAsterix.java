@@ -22,26 +22,26 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
  *
  * @author sfurbino
  */
-@InfoConfigRestClientIntegracao(enderecosDocumentacao = "https://www.postman.com/omnismart-io/omnismart/collection/n6ao5mz/api-omnismart",
+@InfoConfigRestClientIntegracao(enderecosDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#intro",
         tipoAutenticacao = FabTipoAutenticacaoRest.USUARIO_SENHA_SIMPLES,
         nomeIntegracao = FabConfigAsterixVoip.NOME_APLICACAO,
         configuracao = FabConfigAsterixVoip.class
 )
 public enum FabApiAsterix implements ComoFabricaIntegracaoRest {
 
-    @InfoConsumoRestService(getPachServico = "/_REST/resellersAPI/createDomain",
-            tipoConexao = FabTipoConexaoRest.POST,
+    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/consultarChamada?data_final={0}&data_inicial={1}&cliente_id={2}",
+            tipoConexao = FabTipoConexaoRest.GET,
             tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,
             aceitarCertificadoDeHostNaoConfiavel = true,
-            parametrosPost = {"APIiddoCliente", "dominio", "qtd_contas"},
-            urlDocumentacao = "https://documenter.getpostman.com/view/9632769/SWLiamS3#74ef2799-5a93-4fb1-933b-ad5aaa6adf03")
+            parametrosGet = {"data_final", "data_inicial", "origem", "destino", "cliente_id"},
+            urlDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#4eef08ec-7c89-4e26-84d4-457e0d2912ac")
     LIGACOES_LISTAR,
-    @InfoConsumoRestService(getPachServico = "/_REST/resellersAPI/listAccountsByDomain",
-            tipoConexao = FabTipoConexaoRest.POST,
+    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/downloadChamadaAudio",
+            tipoConexao = FabTipoConexaoRest.GET,
             aceitarCertificadoDeHostNaoConfiavel = true,
             tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,
-            parametrosPost = {"dominio"},
-            urlDocumentacao = "https://documenter.getpostman.com/view/9632769/SWLiamS3#74ef2799-5a93-4fb1-933b-ad5aaa6adf03")
+            parametrosGet = {"uniqueId"},
+            urlDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#c472b2c5-2a42-4beb-867b-0672a70addc4")
     LIGACOES_BAIXAR_AUDIO;
 
 }
