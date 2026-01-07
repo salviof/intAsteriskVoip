@@ -18,13 +18,13 @@ public class IntegracaoRestAsterixvoipLigacoesListarTest {
     public void testConsultarChamadasTest() {
         SBCore.configurar(new ConfiguradorCoreIntegracaoAsterix(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
 
-        LocalDateTime dataInicio = LocalDateTime.of(2023, 1, 1, 7, 0, 0);
+        LocalDateTime dataInicio = LocalDateTime.of(2025, 1, 1, 7, 0, 0);
         LocalDateTime dataFinal = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         String dataInicioFormatada = dataInicio.format(formatter);
         String dataFinalFormatada = dataFinal.format(formatter);
-        int clienteId = 188;
+        int clienteId = 189;
 
         ItfRespostaWebServiceSimples resposta = FabApiAsterix.LIGACOES_LISTAR.getAcao((Object) dataFinalFormatada, (Object) dataInicioFormatada, (Object) clienteId).getResposta();
         System.out.println(resposta);

@@ -29,11 +29,11 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
 )
 public enum FabApiAsterix implements ComoFabricaIntegracaoRest {
 
-    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/consultarChamada?data_final={0}&data_inicial={1}&cliente_id={2}",
+    @InfoConsumoRestService(getPachServico = "/api/v3/chamada/consultarChamada?data_final={0}&data_inicial={1}",
             tipoConexao = FabTipoConexaoRest.GET,
             tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,
             aceitarCertificadoDeHostNaoConfiavel = true,
-            parametrosGet = {"data_final", "data_inicial", "origem", "destino", "cliente_id"},
+            parametrosGet = {"data_final", "data_inicial", "origem", "destino"},
             urlDocumentacao = "https://documenter.getpostman.com/view/13040224/TzCTa5yB#4eef08ec-7c89-4e26-84d4-457e0d2912ac")
     LIGACOES_LISTAR,
     @InfoConsumoRestService(getPachServico = "/api/v3/chamada/downloadChamadaAudio/{0}",
