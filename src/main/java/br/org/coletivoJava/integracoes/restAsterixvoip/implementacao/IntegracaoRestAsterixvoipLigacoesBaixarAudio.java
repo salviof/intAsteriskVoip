@@ -4,7 +4,7 @@ import br.org.coletivoJava.integracoes.asterix_voip.api.FabApiAsterix;
 import br.org.coletivoJava.integracoes.restAsterixvoip.api.InfoIntegracaoRestAsterixvoipAsterix;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.entidade.basico.ComoUsuario;
 
 @InfoIntegracaoRestAsterixvoipAsterix(tipo = FabApiAsterix.LIGACOES_BAIXAR_AUDIO)
 public class IntegracaoRestAsterixvoipLigacoesBaixarAudio
